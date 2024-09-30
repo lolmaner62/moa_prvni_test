@@ -43,12 +43,14 @@ function Work() {
     }
     else
     {
-        if (cislo2 != 0) {
-            output = cislo1 / cislo2;
+        if (cislo2 == 0) {
+            document.getElementById('Vysledek').innerText = "Chuj nedel nulou";
+            
         }
         else
         {
-            document.getElementById('Vysledek').innerText = "Chuj nedel nulou";
+            output = cislo1 / cislo2;
+            document.getElementById('Vysledek').innerText = output;
         }
 
 
