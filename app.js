@@ -11,5 +11,38 @@ if ('serviceWorker' in navigator) {
 }
  
 function Work() {
-    document.getElementById('hello').innerText = 'Hello world';
+    let cislo1;
+    let cislo2;
+    var operace;
+    try {
+
+         cislo1 = parseInt(document.getElementById('cislo1').value);
+         var e = document.getElementById('operace');
+         operace = e.value;
+         cislo2 = parseInt(document.getElementById('cislo2').value);
+    } catch (error) {
+        console.log('Nefunnguje to', error);
+    }
+    
+    
+    let output;
+    
+    if (operace == "+") {
+        output = cislo1 + cislo2;
+    }
+    else if (operace == "-")
+    {
+        output = cislo1 - cislo2;
+    }
+    else if (operace == "*")
+    {
+            output = cislo1 * cislo2;
+    }
+    else
+    {
+        output = cislo1 / cislo2;
+    }
+    console.log(output);
+    console.log(operace);
+    document.getElementById('Vysledek').innerText = output;
 }
