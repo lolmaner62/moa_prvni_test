@@ -29,20 +29,31 @@ function Work() {
     
     if (operace == "+") {
         output = cislo1 + cislo2;
+        document.getElementById('Vysledek').innerText = output;
     }
     else if (operace == "-")
     {
         output = cislo1 - cislo2;
+        document.getElementById('Vysledek').innerText = output;
     }
     else if (operace == "*")
     {
             output = cislo1 * cislo2;
+            document.getElementById('Vysledek').innerText = output;
     }
     else
     {
-        output = cislo1 / cislo2;
+        if (cislo2 != 0) {
+            output = cislo1 / cislo2;
+        }
+        else
+        {
+            document.getElementById('Vysledek').innerText = "Chuj nedel nulou";
+        }
+
+
     }
     console.log(output);
     console.log(operace);
-    document.getElementById('Vysledek').innerText = output;
+    
 }
