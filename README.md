@@ -1,3 +1,3 @@
 # moa_prvni_test
-
-Kokot
+Release me
+https://feetpicks.netlify.app
