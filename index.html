@@ -7,79 +7,26 @@
     <link rel="stylesheet" href="style.css">
     <script src="app.js"></script>
     <link rel="manifest" href="manifest.json">
-    <style>
-        /* Base styling */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f0f0f0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .container {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
-            text-align: center;
-        }
-        h1 {
-            color: #333;
-            margin-bottom: 20px;
-        }
-        label {
-            font-size: 1.2em;
-            color: #555;
-        }
-        input, select {
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            width: calc(100% - 22px); /* Adjust for padding */
-            font-size: 1em;
-        }
-        button {
-            padding: 10px 20px;
-            background-color: #28a745;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1.1em;
-            transition: background-color 0.3s ease;
-        }
-        button:hover {
-            background-color: #218838;
-        }
-        #Vysledek {
-            margin-top: 20px;
-            font-size: 1.3em;
-            font-weight: bold;
-            color: #007bff;
-        }
-    </style>
 </head>
 <body>
-    <h1>Kalkulator 3000000000000</h1>
-    <label>Zadej cisla:</label>
-    <input id="cislo1">
-    <select  id="operace">
-        <option value="+">+</option>
-        <option value="-">-</option>
-        <option value="*">*</option>
-        <option value="/">/</option>
-      </select>
-    <input id="cislo2">
-    <br>
-    <button onclick="Work()">Vysledek</button>
-    <p id="Vysledek" ></p>
+    <form>
+        <h1>Kalkulator 3000</h1>
+        <label>Zadej cisla:</label>
+        <input id="cislo1"> <br>
+        <select  id="operace">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select> <br>
+        <input id="cislo2">
+        <br>
+        <button onclick="Work()">Vysledek</button>
+        <p id="Vysledek" ></p>
+
+
+
+    </form>
+    
 </body>
 </html>

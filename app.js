@@ -55,7 +55,6 @@ function Work() {
 
 
     }
-    console.log(output);
-    console.log(operace);
+    
     
 }
