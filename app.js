@@ -10,17 +10,20 @@ if ('serviceWorker' in navigator) {
     });
 }
  
+
+
 function Work() {
     let cislo1;
     let cislo2;
     var operace;
     event.preventDefault();
+    document.getElementById("911").hidden = true;
     try {
 
-         cislo1 = parseInt(document.getElementById('cislo1').value);
+         cislo1 = parseFloat(document.getElementById('cislo1').value);
          var e = document.getElementById('operace');
          operace = e.value;
-         cislo2 = parseInt(document.getElementById('cislo2').value);
+         cislo2 = parseFloat(document.getElementById('cislo2').value);
     } catch (error) {
         console.log('Nefunnguje to', error);
     }
@@ -28,22 +31,25 @@ function Work() {
     
     let output;
     
-    if (operace == "+") {
+switch (operace) {
+    case "+":
         output = cislo1 + cislo2;
         document.getElementById('Vysledek').innerText = output;
-    }
-    else if (operace == "-")
-    {
+        break;
+    case "-":
         output = cislo1 - cislo2;
         document.getElementById('Vysledek').innerText = output;
-    }
-    else if (operace == "*")
-    {
-            output = cislo1 * cislo2;
-            document.getElementById('Vysledek').innerText = output;
-    }
-    else
-    {
+        break;
+    case "*":
+        output = cislo1 * cislo2;
+        document.getElementById('Vysledek').innerText = output;
+        break;
+    case "/":
+        if (cislo1 == 9 && cislo2 == 11) {
+            document.getElementById("911").hidden = false;
+            document.getElementById('Vysledek').innerText = "They hit the second tower 💀";
+            return;
+        }
         if (cislo2 == 0) {
             document.getElementById('Vysledek').innerText = "Chuj nedel nulou";
             
@@ -53,9 +59,9 @@ function Work() {
             output = cislo1 / cislo2;
             document.getElementById('Vysledek').innerText = output;
         }
-
-
-    }
-    
-    
+        break;
+    default:
+        document.getElementById('Vysledek').innerText = "Invalid input";
+        break;
+}  
 }
