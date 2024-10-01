@@ -14,6 +14,7 @@ function Work() {
     let cislo1;
     let cislo2;
     var operace;
+    event.preventDefault();
     try {
 
          cislo1 = parseInt(document.getElementById('cislo1').value);
