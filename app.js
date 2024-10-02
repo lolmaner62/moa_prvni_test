@@ -16,6 +16,7 @@ function Work() {
     let cislo1;
     let cislo2;
     var operace;
+    let output;
     event.preventDefault();
     document.getElementById("911").hidden = true;
     try {
@@ -27,10 +28,15 @@ function Work() {
     } catch (error) {
         console.log('Nefunnguje to', error);
     }
+    if (isNaN(cislo1) || isNaN(cislo2)) {
+        document.getElementById('Vysledek').innerText = "Invalid input";
+        console.log("Invalid input detected");
+        return;
+    }
     
     
-    let output;
-    
+
+
 switch (operace) {
     case "+":
         output = cislo1 + cislo2;
@@ -63,5 +69,5 @@ switch (operace) {
     default:
         document.getElementById('Vysledek').innerText = "Invalid input";
         break;
+    }
 }  
-}
